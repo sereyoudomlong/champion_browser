@@ -1,5 +1,5 @@
-import ChampionCard from "./components/ChampionCard";
 import axios from "axios";
+import ChampionGrid from "./components/ChampionGrid";
 import { useState, useEffect } from "react";
 
 function App() {
@@ -16,19 +16,11 @@ function App() {
   useEffect(() => {
     fetchdata();
   }, []);
-
-  console.log(championPicLocation);
   return (
-    <div>
-      {championPicLocation.map((i, index) => (
-        <ChampionCard
-          name={champions[index]}
-          pictureSrc={i}
-          onClick={() => console.log("hello")}
-          key={index}
-        ></ChampionCard>
-      ))}
-    </div>
+    <ChampionGrid
+      championLocation={championPicLocation}
+      championNames={champions}
+    />
   );
 }
 
