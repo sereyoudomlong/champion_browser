@@ -18,9 +18,9 @@ function App() {
   }, []);
   return (
     <ChampionGrid
-      championLocation={championPicLocation}
+      championLocations={championPicLocation}
       championNames={champions}
-    />
+    ></ChampionGrid>
   );
 }
 
