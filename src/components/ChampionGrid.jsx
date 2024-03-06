@@ -1,5 +1,5 @@
 import ChampionCard from "./ChampionCard";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 /**
  * a component that display all champion cards by using gridlayout
@@ -39,7 +39,19 @@ const ChampionGrid = ({ championLocations, championNames }) => {
 
 export default ChampionGrid;
 
+const slideInFromLeft = keyframes`
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
+
 const ContainerDiv = styled.div`
+  animation: 1s ease-out 0s 1 ${slideInFromLeft};
   padding: 70px;
   display: grid;
   gap: 10px;

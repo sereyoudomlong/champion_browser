@@ -1,5 +1,6 @@
 import axios from "axios";
 import ChampionGrid from "./components/ChampionGrid";
+import Header from "./components/Header";
 import { useState, useEffect } from "react";
 
 function App() {
@@ -17,10 +18,19 @@ function App() {
     fetchdata();
   }, []);
   return (
-    <ChampionGrid
-      championLocations={championPicLocation}
-      championNames={champions}
-    ></ChampionGrid>
+    <div>
+      <Header
+        mainText={"Champion"}
+        upperSubText={"Choose your"}
+        lowerSubText={
+          "With more than 140 champions, you’ll find the perfect match for your playstyle. Master one, or master them all."
+        }
+      ></Header>
+      <ChampionGrid
+        championLocations={championPicLocation}
+        championNames={champions}
+      ></ChampionGrid>
+    </div>
   );
 }
 

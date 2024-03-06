@@ -35,6 +35,7 @@ const NameBar = styled.div`
 
   color: white;
   font-family: "Anta", sans-serif;
+  font-weight: 400;
   font-size: x-large;
   font-style: italic;
 `;
